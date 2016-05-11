@@ -4,7 +4,6 @@ Created on Feb 10, 2016
 @author: niormsby
 '''
 from selenium import webdriver
-from Scraper import Scraper
 from Amazon.Scrapers.Best_Seller_Scraper import Best_Seller_Scraper
 
 class Amazon_Scraper(object):
@@ -29,8 +28,6 @@ class Amazon_Scraper(object):
         bestSellers = []
         
         #Navigate to Amazon's best seller list  
-        Scraper().navigateToAmazon(driver)
-        print("navigated to amazon")
         #Scrape all the Best Seller categories from Amazon and return them as an array
         bestSellerCategories = best_Seller_Scraper.getAmazonBestSellerCategories(driver)  
         print("got best seller categories")
